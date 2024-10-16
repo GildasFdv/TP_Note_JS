@@ -21,10 +21,12 @@ function display12firstCharacters(characters)
 {
     characters.forEach(element => {
         charactersHtml.innerHTML += `
-            <div>
-                <img src="${element.image}" class="${element.house.toLowerCase()}" alt="${element.name}" />
-                <p>${element.name}</p>
-            </div>
+            <a href="./details.html?id=${element.id}">
+                <div>
+                    <img src="${element.image}" class="${element.house.toLowerCase()}" alt="${element.name}" />
+                    <p>${element.name}</p>
+                </div>
+            </a>
         `;
     });
 }

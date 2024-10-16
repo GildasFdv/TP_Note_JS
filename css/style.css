@@ -162,6 +162,10 @@ footer p {
   color: var(--Gold, #b99049);
 }
 
+.characters a {
+  text-decoration: none;
+}
+
 /* PAGE PERSO */
 .page_perso h3 {
   padding: 50px 50px 0 50px;
