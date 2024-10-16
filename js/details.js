@@ -21,7 +21,7 @@ function displayCharacter(character) {
       <h3>${character.name}</h3>
       <div class="perso">
         <figure class="perso__left">
-          <img src="${character.image}" alt="${character.name}" />
+          <img src="${character.image}" alt="${character.name}" onerror="this.src='../images/logo/logo.png'" />
           <figcaption>${character.name}</figcaption>
         </figure>
         <div class="perso__right">
@@ -51,7 +51,7 @@ function displayCharacter(character) {
       </div>
     </section>
     <section class="house__perso">
-      <img src="./images/logo/${character.house}.png" alt="${character.house}" />
+      <img src="./images/logo/${character.house}.png" alt="${character.house}" onerror="this.src='../images/logo/logo.png'" />
     </section>
     `;
 }
@@ -60,7 +60,5 @@ function displayCharacter(character) {
 
 
 const character = await getCharacterById(characterId);
-
-console.log(character);
 
 displayCharacter(character);

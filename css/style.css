@@ -35,7 +35,6 @@ main {
 }
 main h3 {
   text-transform: uppercase;
-  border-bottom: 3px solid black;
   text-align: center;
   color: var(--DarkGrey, #3a3a3a);
   text-align: center;
@@ -46,6 +45,22 @@ main h3 {
   line-height: normal;
   padding-top: 10px;
 }
+
+main .h3container {
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+main .h3container img{
+  width: 25px;
+  height: 25px;
+  margin-left: 50px;
+  transform: translateY(5px);
+}
+
 main h2 {
   color: var(--DarkGrey, #3a3a3a);
   text-align: center;
