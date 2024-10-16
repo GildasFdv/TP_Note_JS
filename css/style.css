@@ -140,6 +140,23 @@ footer p {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   object-fit: cover;
 }
+
+.characters :hover .gryffindor {
+  border: 8px solid var(--Gold, #ff5555);
+}
+
+.characters :hover .slytherin {
+  border: 8px solid var(--Green, #124b10);
+}
+
+.characters :hover .ravenclaw {
+  border: 8px solid var(--Blue, #078cb1);
+}
+
+.characters :hover .hufflepuff {
+  border: 8px solid var(--Yellow, #e1b50c);
+}
+
 .characters p {
   text-align: center;
   color: var(--Gold, #b99049);
