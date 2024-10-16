@@ -1,7 +1,7 @@
 /* Appels au DOM */
 
 const charactersHtml = document.body.querySelector(".characters");
-
+const housesHtml = document.body.querySelectorAll(".houses div");
 
 /* Fonctions */
 
@@ -12,9 +12,14 @@ async function getCharacters()
                                 .catch(err => console.error(err));
 }
 
+function filterFirst12Characters(characters)
+{
+    return characters.slice(0, 12);
+}
+
 function display12firstCharacters(characters)
 {
-    characters.slice(0, 12).forEach(element => {
+    characters.forEach(element => {
         charactersHtml.innerHTML += `
             <div>
                 <img src="${element.image}" class="${element.house.toLowerCase()}" alt="${element.name}" />
@@ -24,8 +29,23 @@ function display12firstCharacters(characters)
     });
 }
 
+function filterCharactersByHouse(characters, house)
+{
+    return characters.filter(character => character.house === house);
+}
+
 
 /* Appels */
 
 const characters = await getCharacters();
-display12firstCharacters(characters);
+const first12Characters = filterFirst12Characters(characters);
+display12firstCharacters(first12Characters);
+
+housesHtml.forEach(house => {
+    house.addEventListener("click", () => {
+        charactersHtml.innerHTML = "";
+        const houseName = house.firstChild.nextSibling.alt;
+        const charactersByHouse = filterCharactersByHouse(first12Characters, houseName);
+        display12firstCharacters(charactersByHouse);
+    });
+});
