@@ -177,6 +177,19 @@ footer p {
   justify-content: space-between;
   width: 100%;
 }
+
+.page_perso .perso__right table {
+  height: 100%;
+}
+
+.page_perso .perso__right td {
+  text-align: left;
+}
+
+.page_perso .perso__right th {
+  text-align: left;
+}
+
 .page_perso .perso__right > div {
   display: flex;
   justify-content: space-around;
@@ -203,7 +216,14 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px;
 }
+
+.page_perso .house__perso img {
+  width: 300px;
+  aspect-ratio: 300/337;
+}
+
 
 @media screen and (max-width: 425px) {
   header {
